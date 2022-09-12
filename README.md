@@ -3,6 +3,31 @@ The place where react best practices found their home.
 
 ## Hooks
  
+
+<details>
+<summary>useOnKeyDown</summary>
+ 
+```js
+  const useOnKeyDown = () => {
+    const [state, setState] = useState({ key: "" });
+
+    const onKeyDown = ({ key }) => {
+      setState({ key });
+    };
+
+    useEffect(() => {
+      document.addEventListener("keydown", onKeyDown);
+
+      return () => {
+        document.removeEventListener("keydown", onKeyDown);
+      };
+    }, []);
+
+    return state;
+};
+```
+</details>
+
 <details>
 <summary>useDebounce</summary>
  
