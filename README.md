@@ -1,5 +1,5 @@
 # React best practices
-The place where react best practices found their home.
+Лучшие практики реакта.
 
 ## Hooks
  
